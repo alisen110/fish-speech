@@ -508,7 +508,7 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    args.precision = torch.half if args.half else torch.bfloat16
+    args.precision = torch.half if args.half else torch.float16
 
     logger.info("Loading Llama model...")
     llama_queue = launch_thread_safe_queue(
